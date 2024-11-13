@@ -1,9 +1,17 @@
-function Business() {
-    return (
-        <div>
-            <h1>Test</h1>
+import BusinessList from "./BusinessList";
+import './Business.css';
 
-        </div>
+function Business( {image, name, address, city, postcode, category, rating, reviewCount} ) {
+    return (
+    <div> 
+        <ul>
+            <li>{name}</li>
+            <li>{category}</li>
+            <li>Rating {rating}</li>
+            <li>Reviews {reviewCount}</li>
+            <li><img src={image}/></li>
+        </ul>
+    </div>
     );
 };
 
